@@ -46,6 +46,8 @@ pico_enable_stdio_usb(Interrupcao 1)
 
 pico_generate_pio_header(Interrupcao ${CMAKE_CURRENT_LIST_DIR}/Interrupcao.pio)
 
+target_sources(Interrupcao PRIVATE Interrupcao.c)
+
 # Add the standard library to the build
 target_link_libraries(Interrupcao PRIVATE
         pico_stdlib
